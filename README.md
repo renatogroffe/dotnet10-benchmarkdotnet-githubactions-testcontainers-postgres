@@ -18,3 +18,7 @@ Outro dos possíveis resultados (2 registros de contatos por empresa):
 Alguns dados fake gerados como resultados dos testes:
 
 ![Dados fake](img/testcontainers-04.png)
+
+Um possível resultado da execução do workflow do GitHub Actions:
+
+![Workflow do GitHub Actions](img/testcontainers-05.png)
