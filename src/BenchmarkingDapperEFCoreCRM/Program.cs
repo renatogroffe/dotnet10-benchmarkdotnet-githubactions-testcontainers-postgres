@@ -6,6 +6,10 @@ using DotNet.Testcontainers.Builders;
 using Testcontainers.PostgreSql;
 
 
+Console.WriteLine("Numero de contatos por empresa/companhia definido para os testes: " +
+    Environment.GetEnvironmentVariable("NumeroContatosPorCompanhia"));
+Console.WriteLine();
+
 CommandLineHelper.Execute("docker images",
     "Imagens antes da execucao do Testcontainers...");
 CommandLineHelper.Execute("docker container ls",
