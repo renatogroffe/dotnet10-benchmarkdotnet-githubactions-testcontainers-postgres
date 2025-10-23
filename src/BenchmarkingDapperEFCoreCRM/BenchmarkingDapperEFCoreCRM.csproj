@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BenchmarkDotNet" Version="0.15.4" />
+		<PackageReference Include="Bogus" Version="35.6.4" />
+		<PackageReference Include="Dapper" Version="2.1.66" />
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.0-rc.2" />
+		<PackageReference Include="Testcontainers.PostgreSql" Version="4.8.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="DB\basecrmado.sql" />
+		<EmbeddedResource Include="DB\basecrmdapper.sql" />
+		<EmbeddedResource Include="DB\basecrmef.sql" />
+	</ItemGroup>
+
+</Project>
