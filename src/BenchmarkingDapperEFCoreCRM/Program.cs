@@ -17,16 +17,16 @@ CommandLineHelper.Execute("docker container ls",
 
 Console.WriteLine("Criando container para uso do PostgreSQL...");
 var postgresContainer = new PostgreSqlBuilder()
-  .WithImage("postgres:17.6")
-  .WithResourceMapping(
-    DBFileAsByteArray.GetContent("basecrmado.sql"),
-    "/docker-entrypoint-initdb.d/01-basecrmado.sql")
-  .WithResourceMapping(
-    DBFileAsByteArray.GetContent("basecrmdapper.sql"),
-    "/docker-entrypoint-initdb.d/02-basecrmdapper.sql")
-  .WithResourceMapping(
-    DBFileAsByteArray.GetContent("basecrmef.sql"),
-    "/docker-entrypoint-initdb.d/03-basecrmef.sql")
+    .WithImage("postgres:17.6")
+    .WithResourceMapping(
+        DBFileAsByteArray.GetContent("basecrmado.sql"),
+        "/docker-entrypoint-initdb.d/01-basecrmado.sql")
+    .WithResourceMapping(
+        DBFileAsByteArray.GetContent("basecrmdapper.sql"),
+        "/docker-entrypoint-initdb.d/02-basecrmdapper.sql")
+    .WithResourceMapping(
+        DBFileAsByteArray.GetContent("basecrmef.sql"),
+        "/docker-entrypoint-initdb.d/03-basecrmef.sql")
   .WithWaitStrategy(Wait.ForUnixContainer().UntilCommandIsCompleted("pg_isready"))
   .Build();
 await postgresContainer.StartAsync();
