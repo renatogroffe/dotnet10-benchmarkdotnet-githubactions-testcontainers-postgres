@@ -5,7 +5,7 @@ Workflow do GitHub Actions utilizando BenchmarkDotNet para avaliar a performance
 
 Inicialização do container:
 
-![Inicialização do container](img/testcontainers-01.png)
+![Inicialização do container](./img/testcontainers-01.png)
 
 Um dos possíveis resultados (15 registros de contatos por empresa):
 
